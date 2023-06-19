@@ -38,7 +38,10 @@ if "message_history" not in st.session_state:
     st.session_state.message_history = []
 
 # User input
-user_prompt = st.text_area("What would you like to ask?:", height=150)
+placeholder_text = """यस्य कृत्यं न जानन्ति मन्त्रं वा मन्त्रितं परे।
+
+कृतमेवास्य जानन्ति स वै पण्डित उच्यते ॥"""
+user_prompt = st.text_area("What would you like to ask?:", height=150, placeholder=placeholder_text)
 
 # Get GPT response
 col1, col2, col3 = st.columns([1, 5, 1])
